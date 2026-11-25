@@ -12,8 +12,8 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 
-from vrp_execution import contracts_for, entry_fees, fill_price
-from vrp_selection import pick_expiry, pick_strike
+from old_strat_and_backtesting_engine.vrp_execution import contracts_for, entry_fees, fill_price
+from old_strat_and_backtesting_engine.vrp_selection import pick_expiry, pick_strike
 
 
 @dataclass

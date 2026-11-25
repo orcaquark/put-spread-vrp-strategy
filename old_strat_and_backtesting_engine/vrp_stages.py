@@ -9,10 +9,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-import vrp_protocol as P
-from vrp_data_layer import ChainStore, align, load_market, load_options, realized_variance
-from vrp_metrics import TrialLog, alpha_beta, perf, sharpe_daily, trade_metrics
-from vrp_signals import build_signals, har_forecast
+import old_strat_and_backtesting_engine.vrp_protocol as P
+from old_strat_and_backtesting_engine.vrp_data_layer import ChainStore, align, load_market, load_options, realized_variance
+from old_strat_and_backtesting_engine.vrp_metrics import TrialLog, alpha_beta, perf, sharpe_daily, trade_metrics
+from old_strat_and_backtesting_engine.vrp_signals import build_signals, har_forecast
 
 
 # --------------------------------------------------------------------------------------

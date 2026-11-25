@@ -25,9 +25,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from vrp_data_layer import OPTION_COLS
-from vrp_selection import pick_expiry, pick_strike
-from vrp_stages import calendar_from_market
+from old_strat_and_backtesting_engine.vrp_data_layer import OPTION_COLS
+from old_strat_and_backtesting_engine.vrp_selection import pick_expiry, pick_strike
+from old_strat_and_backtesting_engine.vrp_stages import calendar_from_market
 
 PLACEHOLDER_DELTA = -0.01   # on non-entry days only; selection never runs on those days (see assemble_options)
 SETTLE_FROM_PRIOR_CLOSE = {pd.Timestamp("2018-12-05"): pd.Timestamp("2018-12-04")}  # National Day of Mourning (Bush): no SPX close that day

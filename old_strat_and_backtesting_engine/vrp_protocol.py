@@ -11,11 +11,11 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
-from vrp_engine import run_backtest
-from vrp_execution import fill_price
-from vrp_metrics import (alpha_beta, bootstrap_alpha_ci, bootstrap_mean_ci, breakeven_fill_fraction,
+from old_strat_and_backtesting_engine.vrp_engine import run_backtest
+from old_strat_and_backtesting_engine.vrp_execution import fill_price
+from old_strat_and_backtesting_engine.vrp_metrics import (alpha_beta, bootstrap_alpha_ci, bootstrap_mean_ci, breakeven_fill_fraction,
                       deflated_sharpe, perf, sharpe_daily, trade_metrics)
-from vrp_signals import build_signals, forward_mean, har_forecast
+from old_strat_and_backtesting_engine.vrp_signals import build_signals, forward_mean, har_forecast
 
 
 @dataclass
@@ -86,7 +86,7 @@ def direct_premium_check(ctx, signal):
 
 def overnight_sensitivity(ctx):
     """Same premium check with the overnight gap added to RV (see IMPLEMENTATION_NOTES.md, issue 4)."""
-    from vrp_data_layer import realized_variance
+    from old_strat_and_backtesting_engine.vrp_data_layer import realized_variance
     if ctx.cfg["rv"]["estimator"] != "5min":
         return None
     rv_o = realized_variance(ctx.market, ctx.days_all, ctx.cfg, include_overnight=True)
